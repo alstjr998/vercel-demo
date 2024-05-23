@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
-  const images = ['src/img/slide1.jpg', 'src/img/slide2.jpg', 'src/img/slide3.jpg', 'src/img/slide4.jpg'];
+  const images = ['/img/slide1.jpg', '/img/slide2.jpg', '/img/slide3.jpg', '/img/slide4.jpg'];
 
   useEffect(() => {
     const interval = setInterval(() => {

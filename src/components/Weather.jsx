@@ -27,7 +27,7 @@ const Weather = () => {
         <a href="https://weather.naver.com/">+더보기</a>
       </div>
       <a href="https://weather.naver.com/" target="_blank" rel="noopener noreferrer">
-        <img src="src/img/weather.png" alt="Weather" />
+        <img src="/img/weather.png" alt="Weather" />
       </a>
     </div>
   );

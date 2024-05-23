@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div id="sctc_logo">
         <a href="https://www.sctc.kr/index/">
-          <img src="/src/img/sctc_logo.png" alt="SCTC 로고" />
+          <img src="/img/sctc_logo.png" alt="SCTC 로고" />
         </a>
       </div>
       <div id="address">

@@ -12,7 +12,7 @@ const Menu = () => {
     <>
       <div id="menuButton" onClick={menuToggle}>
         <a href="#" className="toggleButton">
-          <img src="src/img/menuButton.png" alt="menu button" />
+          <img src="/img/menuButton.png" alt="menu button" />
         </a>
       </div>
       <nav id="nav" className={menuVisible ? 'menu active' : 'menu'}>
