@@ -1,0 +1,597 @@
+*{
+  margin: 0 auto;
+}
+
+/* 컨테이너 */
+.container{
+  width: 100vw;
+}
+
+
+/* 헤더 영역 */
+header{
+  width: 100vw; height: 90px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(117, 162, 255);
+  box-shadow: 0px 0px 5px;
+}
+header > #leftBlank{
+  display: none;
+}
+header > #menuButton{
+  display: none;
+}
+/* 헤더 - 로고 영역 */
+#logo{
+  width: 380px; height: 100%;
+  margin: 0;
+}
+#logo a{
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+#logo a img{
+  height: 100%;
+  margin: 0;
+}
+#logo p{
+  margin: 0 6px;
+  font-size: 37px;
+  line-height: 95px;
+  letter-spacing: 1.5px;
+  font-family: 'NanumSquareRound',sans-serif;
+  font-weight: 800;
+  text-shadow: 0px 0px 10px rgb(80, 109, 173);
+}
+/* 헤더 - 네비게이션 메뉴 영역 */
+.menu{
+  width: 530px; height: 100%;
+  margin: 0;
+}
+.menu.active{
+  display: none;
+}
+#nav > ul{
+  display: flex;
+  height: 100%;
+  justify-content: right;
+  align-items: center;
+  padding: 0;
+}
+#nav > ul > li{
+  list-style: none;
+  margin: 5px 0 0; padding: 30px 5px 30px 5px;
+  /* border-right: 2px solid rgba(51, 51, 51, 0.322); */
+  position: relative;
+}
+#nav > ul > li > .textBox{
+  padding: 3px 20px 3px 10px;
+  border-right: 2px solid rgba(51, 51, 51, 0.322);
+}
+#nav > ul > #login > .textBox:last-child{
+  border: none;
+}
+#nav > ul > li > div > a{
+  color: white;
+  font-family: 'NanumSquareRound',sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+#nav #ul_menu1, #ul_menu2{
+  display: none;
+  width: 100%;
+  position: absolute;
+  list-style: none;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.936);
+  border-radius: 5px;
+  top: 89px; left: 0;
+}
+#nav #ul_menu1:after{
+  content:"";
+  position: absolute;
+  top: -20px;
+  left: 58px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid rgba(255, 255, 255, 0.936);
+}
+#nav #ul_menu2:after{
+  content:"";
+  position: absolute;
+  top: -20px;
+  left: 46px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid rgba(255, 255, 255, 0.936);
+}
+#nav ul > li > ul > li{
+  font-family: 'NanumSquareRound',sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+#nav ul> li > ul > li > a{
+  color: rgba(46, 46, 46, 0.762);
+  text-decoration: none;
+}
+#nav ul> li > ul > li > a:hover{
+  text-shadow: 0px 0px 7px rgba(120, 120, 120, 0.337);
+  color: black;
+}
+#nav > ul > li:hover > div > a{ /*메뉴 호버시 그림자*/
+  text-shadow: 0px 0px 7px rgb(80, 109, 173);
+}
+#nav > ul #li_menu1:hover > #ul_menu1{
+  display: block;
+  z-index: 10;
+}
+#nav > ul #li_menu2:hover > #ul_menu2{
+  display: block;
+  z-index: 10;
+}
+#login{
+  margin-right: 10px;
+}
+
+
+/* 메인 영역 */
+.main{
+  width: 910px; height: 355px;
+  display: flex;
+  border: 3px solid rgb(80, 109, 173);
+  border-radius: 2px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+/* 메인 영역 - 캐러셀 */
+#carousel{
+  width: 620px; height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#images{
+  position: absolute;
+}
+/* 메인 영역 - 버튼 블록 */
+#buttons{
+  width: 290px; height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 3px solid rgb(80, 109, 173);
+}
+#buttons > a{
+  height: 50%;
+  margin: 0;
+}
+#buttons > a > img{
+  height: 100%;
+  z-index: -5;
+}
+
+
+
+/* 컨텐츠 블록 영역 */
+.contentBlock{
+  width: 910px; height: 230px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 컨텐츠 블록 영역 - 공지사항&질문 */
+#board{
+  width: 450px; height: 100%;
+  margin: 0;
+}
+#board input[type="radio"]{
+  display: none;
+}
+#board label{
+  font-family: 'NanumSquareRound',sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.46);
+  font-size: 27px;
+  line-height: 50px;
+  margin: 5px 10px 0 10px;
+  padding-left: 5px;
+  text-align: center;
+  border-left: 5px solid rgba(235, 87, 87, 0.167);
+}
+#board label:hover{
+  color: black;
+}
+#board input:checked + label{
+  color: rgb(38, 77, 155);
+  font-weight: 700;
+  border-left: 5px solid rgb(235, 87, 87);
+}
+#board .plusButton{
+  float: right;
+  margin: 20px 15px 0;
+  display: none;
+}
+#board .plusButton > a{
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 13px;
+  font-weight: 700;
+}
+#board .plusButton > a:hover{
+  text-decoration: underline;
+}
+#notice:checked ~ #plusButton_notice, #question:checked ~ #plusButton_question{
+  display: block;
+}
+/* 컨텐츠 블록 영역 - 공지사항&질문 하위 내용 */
+.tabContent{
+  display: none;
+}
+#board > div > ul{
+  padding-left: 20px;
+  /* border-top: 1px solid gray; */
+}
+#board > div > ul > li{
+  padding: 6px 0 2px;
+}
+#board > div > ul > li > a{
+  text-decoration: none;
+  color: black;
+  font-family: 'NanumSquareRound',sans-serif;
+  letter-spacing: 1px;
+}
+#board > div > ul > li > a:hover{
+  font-weight: 700;
+}
+#notice:checked ~ #noticetab, #question:checked ~ #questiontab{
+  display: block;
+}
+/* 컨텐츠 블록 영역 - 간격 */
+#gap{
+  width: 4px; height: 90%;
+  margin: 0;
+  background-color: rgba(151, 151, 151, 0.212);
+}
+/* 컨텐츠 블록 영역 - 날씨 */
+#weather{
+  width: 450px; height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+#weather > #text{
+  display: flex;
+  margin: 0 10px;
+}
+#weather > #text > #title{
+  font-family: 'NanumSquareRound',sans-serif;
+  text-decoration: none;
+  color: rgb(38, 77, 155);
+  font-size: 27px;
+  margin: 10px 10px 0 10px;
+  padding-left: 5px;
+  font-weight: 700;
+  border-left: 5px solid rgb(235, 87, 87);
+  width: 140px;
+  height: 30.4px;
+}
+#weather > a > img{
+  width: 80%;
+  margin: 0 0 0 60px;
+}
+#weahter > #today{
+  line-height: 100px;
+  background-color: black;
+}
+#weather .plusButton{
+  margin: 20px 15px 0;
+}
+#weather .plusButton > a{
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 13px;
+  font-weight: 700;
+}
+#weather .plusButton > a:hover{
+  text-decoration: underline;
+}
+
+
+
+/* 푸터 영역 */
+footer{
+  width: 100%; height: 125px;
+  margin-top: 15px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+}
+#sctc_logo{
+  width: 210px; height: 100%;
+  margin: 0;
+}
+#sctc_logo > a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sctc_logo > a > img{
+  height: 30%;
+  margin: 0;
+}
+#address{
+  width: 700px; height: 100%;
+  margin: 0px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center; */
+}
+#address > p{
+  margin: 0;
+  text-align: left;
+  font-size: 13px;
+  padding: 2px;
+  color: rgb(66, 66, 66);
+  padding-left: 10px;
+}
+#address > p > span{
+  color: rgb(32, 32, 32);
+  font-weight: 700;
+}
+#address > p:first-child{
+  padding-top: 30px;
+}
+
+
+
+
+/* 반응형 - 910px 이하부터 */
+@media screen and (max-width: 910px) {
+
+  /* 헤더 영역 */
+  header{
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  header > #leftBlank{
+    display: block;
+  }
+  header > #menuButton{
+    display: block;
+    height: 100%;
+  }
+  header > #menuButton > a > img{
+    height: 45%;
+    margin-top: 65%;
+  }
+  /* 헤더 - 로고 영역 */
+  #logo{
+    width: 60vw;
+    margin-left: 40px;
+  }
+  #logo a{
+    justify-content: center;
+  }
+  #logo p{
+    margin-right: 20px;
+  }
+  
+  /* 헤더 - 네비게이션 메뉴 영역 */
+  .menu{
+    width: 100vw;
+    display: none;
+  }
+  .menu.active{
+    display: flex;
+  }
+  #nav > ul{
+    flex-direction: column;
+    border-top: 4px solid rgb(73, 104, 167);
+  }
+  #nav > ul > li{
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    z-index: 10;
+    background-color: rgb(93, 121, 177);
+    border: 2px solid rgb(93, 121, 177);
+  }
+  #nav > ul > li > .textBox{
+    padding: 3px 10px 3px 10px;
+    border: none;
+  }
+  #nav > ul #li_menu1:hover > #ul_menu1{
+    display: none;
+  }
+  #nav > ul #li_menu2:hover > #ul_menu2{
+    display: none;
+  }
+  #nav > ul > li:hover > div > a{ /*메뉴 호버시 그림자*/
+    text-shadow: 0px 0px 7px rgb(36, 50, 79);
+  }
+  
+
+  /* 메인 영역 */
+  .main{
+    width: 100vw; height: auto;
+    display: flex;
+    border: 3px solid rgb(80, 109, 173);
+    border-radius: 2px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    z-index: 5;
+  }
+  /* 메인 영역 - 캐러셀 */
+  #carousel{
+    width: 100%; height: 355px;
+    position: relative;
+  }
+  #images > img{
+    width: 100vw; height: 355px;
+  }
+  /* 메인 영역 - 버튼 블록 */
+  #buttons{
+    width: 100%; height: 175px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background-color: rgba(150, 185, 255, 0.47);
+    border-top: 3px solid rgb(80, 109, 173);
+  }
+  #buttons > a{
+    height: 175px;
+  }
+  @media screen and (max-width: 585px) {
+    #buttons > a{
+      width: 50%;
+      height: auto;
+    }
+    #buttons > a >img{
+      width: 100%;
+    }
+  }
+
+
+  /* 컨텐츠 블록 영역 */
+  .contentBlock{
+    width: 100vw; height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* 컨텐츠 블록 영역 - 공지사항&질문 */
+  #board{
+    width: 100%; height: 100%;
+    margin: 0;
+  }
+  #board > div > ul{
+    margin-left: 10px;
+  }
+
+  /* 컨텐츠 블록 영역 - 날씨 */
+  #weather{
+    width: 100%; height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+  #weather > #text{
+    margin: 0;
+  }
+  /* 컨텐츠 블록 영역 - 간격 */
+  #gap{
+    display: none;
+  }
+
+
+  /* 푸터 영역 */
+  footer{
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #sctc_logo{
+    width: 100vw; height: 60px;
+    margin: 0 auto;
+  }
+  #sctc_logo > a > img{
+    height: 80%;
+    margin: 0;
+  }
+  #address{
+    width: 100vw;
+    margin: 0 auto;
+  }
+  #address > p{
+    text-align: center;
+    padding: 0;
+  }
+  #address > p:first-child{
+    padding-top: 0;
+  }
+
+  /* 반응형 - 460px 이하로 줄어들 때 고정 */
+  @media screen and (max-width: 460px) {
+    
+
+    /* 헤더 영역 */
+    header{
+      width: 460px;
+      flex-wrap: nowrap;
+    }
+    #logo{
+      width: 460px; height: 100%;
+    }
+    /* 헤더 - 네비게이션 메뉴 영역 */
+    #nav{
+      width: 460px;
+    }
+
+
+    /* 메인 영역 */
+    .main{
+      width: 460px;
+    }
+    /* 메인 영역 - 캐러셀 */
+    #carousel{
+      width: 460px;
+    }
+    #images > img{
+      width: 460px;
+    }
+    /* 메인 영역 - 로그인&버튼 블록 */
+    #buttons{
+      width: 460px;
+    }
+
+
+    /* 컨텐츠 블록 영역 */
+    .contentBlock{
+      width: 460px;
+    }
+    /* 컨텐츠 블록 영역 - 공지사항&질문 */
+    #board{
+      width: 460px;
+    }
+    /* 컨텐츠 블록 영역 - 날씨 */
+    #weather{
+      width: 460px;
+    }
+
+
+     /* 푸터 영역 */
+    footer{
+      width: 460px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #sctc_logo{
+      width: 460px;
+      margin: 0;
+    }
+    #sctc_logo > a{
+      width: 460px;
+    }
+    #address{
+      width: 460px;
+    }
+  }
+}
